@@ -65,7 +65,7 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="stylelogin_panel.css">
     </head>
     <body>
         <form method="post" action="">
