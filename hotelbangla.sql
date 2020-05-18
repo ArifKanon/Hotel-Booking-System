@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2020 at 03:39 AM
+-- Generation Time: May 18, 2020 at 09:31 PM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.1
+-- PHP Version: 7.2.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -81,6 +80,41 @@ INSERT INTO `emp` (`empId`, `firstName`, `lastName`, `gender`, `address`, `email
 ('311', 'Abir', 'Rahman', 'Male', 'Banani', 'ab@gmail.com', '01761206455', '50000'),
 ('997', 'Kirat', 'Mamun', 'Male', 'Mohammadpur', 'kirat@gmail.com', '01744319424', '60000'),
 ('999', 'Tareq', 'Ahmed', 'Male', 'bas', 'b@a.com', '12345`', '2222');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hotel`
+--
+
+CREATE TABLE `hotel` (
+  `id` int(5) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  `img1` varchar(60) NOT NULL,
+  `img2` varchar(60) NOT NULL,
+  `img3` varchar(60) NOT NULL,
+  `img4` varchar(60) NOT NULL,
+  `facility` varchar(200) NOT NULL,
+  `details` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hotel`
+--
+
+INSERT INTO `hotel` (`id`, `name`, `img1`, `img2`, `img3`, `img4`, `facility`, `details`) VALUES
+(1, 'Le Meridien', '../images/places/Dhaka/lm2.jpg', '../images/places/Dhaka/lm3.jpg', '../images/places/Dhaka/lm4.jpg', '../images/places/Dhaka/lm5.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'A brilliant travel experience awaits guests of Le Méridien Dhaka. Ideal for both business and leisure travel, our hotel welcomes you with a prime location in Bangladesh\'s capital city, tastefully designed rooms and a wealth of smart amenities. Unwind in our spacious hotel rooms and suites, showcasing thoughtful details like complimentary Wi-Fi access, plush bedding, a flat-screen TV, a mini-bar and a luxurious bathroom. You\'ll be thrilled with our hotel\'s selection of six dining options, featuring a trattoria-style Italian restaurant and a chic lobby lounge; we also boast a tranquil spa and a breathtaking rooftop infinity pool. If you\'re interested in hosting a business or social event here in Bangladesh, make use of 45,000 square feet of adaptable venue space, enhanced by on-site event planning and catering. Our hotel is just two miles from Dhaka Airport, plus is near Uttara and the U.S. Embassy, making Le Méridien Dhaka the perfect choice for your visit to Bangladesh.'),
+(2, 'Dhaka Gulshan Hotel', '../images/places/Dhaka/gh2.jpg', '../images/places/Dhaka/gh3.jpg', '../images/places/Dhaka/gh4.jpg', '../images/places/Dhaka/gh5.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'The new Renaissance Dhaka Gulshan Hotel is located in the most dynamic and inspiring neighborhood of Gulshan Avenue. The hotel is only 20 minutes away from Hazrat Shahjalal International Airport, with a distinctive local character that dictates the atmosphere & experiences for guests. Discover sophisticated elements & uber design throughout the 211 stylish rooms & suites. The infinity rooftop temperature-controlled pool with stunning city vista view will take your breath away. Eclectic dining options include restaurants: BAHAR - specializing in local & international cuisine; a vibrant Gulshan Baking Company with world class bakeries & fresh brews. Enjoy gourmet food from around the globe in our specialized fusion restaurant - SEAR. Relax at the Spa & Salon with our signature world class services. The hotel also has a 24-hour Fitness Center for all our guests.'),
+(3, 'The Radisson Blu Chattogram', '../images/places/chattogram/rb2.jpg', '../images/places/chattogram/rb3.jpg', '../images/places/chattogram/rb4.jpg', '../images/places/chattogram/rb5.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'Hotel guests can wake up to scenic views of Chattogram\r\nAs the city\'s premiere upscale international hotel, the Radisson Blu Chattogram Bay View offers guests an unforgettable lodging experience in Chattogram. Stay within walking distance of M. A. Aziz Stadium and Chittagong Club Limited in this commercial capital, and enjoy proximity to popular destinations like Cox\'s Bazar. The hotel lies just a 10-minute drive from the city\'s business hub and 40 minutes from Shah Amanat International Airport (CGP).\r\nStart your morning with our complimentary Super Breakfast buffet, then head to one of our numerous restaurants and bars for lunch or dinner to savor international cuisine, freshly pressed juices, and classic cocktails. After a full day of meetings, unwind with a swim in our circular infinity pool, a refreshing beverage from the pool bar, or a therapeutic treatment at the spa. Our Business Class lounge and the city\'s largest pillarless event facility make us the perfect choice for confere'),
+(4, 'The Peninsula Chittagong', '../images/places/chattogram/pc2.jpg', '../images/places/chattogram/pc3.jpg', '../images/places/chattogram/pc4.jpg', '../images/places/chattogram/pc5.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'Situated at the prestigious GEC circle of the Port City, our hotel provide superior services combining western sophistication and Chittgonian hospitality in a scenic and convenient location. Discover this unique retreat for business or pleasure just minutes from the commercial center surrounded by famous retail shops, restaurants and corporate offices.\r\n\r\nThe Peninsula Chittagong Hotel offers a premier setting for conferences, meetings, and corporate events. Treat your colleagues to a gracious environment, where personalized service is the standard. For your next important event, choose from our wide range of meetings rooms and venue options.'),
+(5, 'Hotel Star Pacific', '../images/places/sylhet/sp2.jpg', '../images/places/sylhet/sp3.jpg', '../images/places/sylhet/sp4.jpg', '../images/places/sylhet/sp5.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'welcomes you to the city of the great saint Hazrat Shahjalal. Situated at the heart of the city and very close to most of the local attractions, we offer you to enjoy warm hospitality, and comfort for your business and leisure needs. Our newly established property is designed to keep you pleased from the moment you step in.'),
+(6, 'Rose View Hotel', '../images/places/sylhet/rs2.jpg', '../images/places/sylhet/rs3.jpg', '../images/places/sylhet/rs4.jpg', '../images/places/sylhet/rs5.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'Rose View Hotel welcomes you to enjoy comfort and luxury, a place where you will find exceptional five star facilities and world class hospitality.\r\n\r\nThe Hotel features 140 fully equipped deluxe and suite rooms, an extensive array of restaurant outlets catering for international and local palates, fully equipped fitness centre, sauna and steam, authentic Thai Spa, heated roof top swimming pool, the only fully stocked licensed bar in the City and a full range of meeting and event facilities ideal for business and private gatherings for up to 1000 people.\r\n\r\nConveniently and centrally located from the shopping and business districts, served by Osmani International Airport, national train networks and accessible via the main road links connecting the city to Dhaka, Rose View Hotel combines style, warmth and convenience with a dash of creativity to deliver an experience that is like no other.\r\n'),
+(7, 'Sayeman Beach Resort', '../images/places/cox\'s_bazar/sbr2.jpg', '../images/places/cox\'s_bazar/sbr3.jpg', '../images/places/cox\'s_bazar/sbr4.jpg', '../images/places/cox\'s_bazar/sbr5.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'After fifty years of glorious past, Sayeman Beach Resort revives its famed legacy of comfort, elegance and impeccable service. An eminent landmark constructed in 1964, this legendary first private hotel of Cox’s Bazar is reborn, infusing modern sophistication into this vintage-chic, iconic hotel at a new beachfront location of Marine Drive, Kolatoli, Cox’s Bazar.\r\nWith its richly historic past, the Hotel Sayeman now fully becomes a part of the exciting and rapidly changing present with the addition of a modern, elegant luxury ocean front hotel. The beauty of Cox’s Bazar – the climate, the panoramic ocean views, the sandy beaches, plus the rich culture and history along with the warmth of the sun – is what attracts people here. And the Sayeman Beach Resort provides you exactly just that with extraordinary comfort, luxury and services.\r\n'),
+(8, 'Long Beach Hotel', '../images/places/cox\'s_bazar/lbh2.jpg', '../images/places/cox\'s_bazar/lbh3.jpg', '../images/places/cox\'s_bazar/lbh4.jpg', '../images/places/cox\'s_bazar/lbh5.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'Encompassing the spectacular views of Cox’s Bazar, Long Beach Hotel stands very close to the hills and sea-beach, offering world class facilities and exhilarating experience to its guests. Whether you are planning a great vacation, the sweetest of honeymoons or a cozy business tour, you would prefer our beach hotel for your relaxing stay. Imagine that the 120 km astonishing longest beach in the world is just five-minute walk away from your room, providing an exuberant sensation in your mind and filling your heart with magnificent joy. Starting from Cox’s Bazar’s longest beach view to the comforts which you would be looking for are all here, making Long Beach Hotel the perfect choice for business, romance and holiday travel. Make your every move easy in Cox’s Bazar by staying with us.'),
+(9, 'Hotel Royal International', '../images/places/sundarban/r2.jpg', '../images/places/sundarban/r3.jpg', '../images/places/sundarban/r4.jpg', '../images/places/sundarban/r5.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'We have been serving with Hotel Royal International Ltd. since 1986. It is the first 10 storied building in Khulna City. It is a pioneer international standard hotel and located in the heart of a very affluent neighborhood in Khulna city and which is newly renovated offering you all the luxuries and services of an international hotel with all personal comforts and coziness of home in the traditional essence of its warm hospitality in 44 exquisitely furnished rooms. It’s our family Business.'),
+(10, 'Hotel Ambassador', '../images/places/sundarban/amb1.jpg', '../images/places/sundarban/amb2.jpg', '../images/places/sundarban/amb3.jpg', '../images/places/sundarban/amb4.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'Hotel Ambassador situated in Khulna, Bangladesh and close to Sheikh Abu Naser International Cricket Stadium. It takes time less than 60 minutes drive from Jessore Air Port while 40 minutes drive to historical “Shatt-Gomboz Mosque”, Khan Jahan Ali Mazzar at Bagerhat from Hotel Ambassador. A few hours drive by car and engine boat to world largest mangrove forest Sundarban.\r\nOur luxurious retreat offers a calming respite from the hustle and bustle of downtown Khulna, where contemporary comforts will refresh your senses. Take in the local culture where fascinating sights and sounds abound within close proximity to the Hotel Ambassador.\r\nRejuvenate with our state-of-the-art facilities and complimentary wireless Internet access is available in public areas and a computer station is located on site. This hotel features business amenities Plus a business center, a big meeting/conference room and secretarial services. Dining options at the hotel include a restaurant along with a coffee shop. Th'),
+(11, 'Hotel River View Bandarban', '../images/places/bandarban/rv2.jpg', '../images/places/bandarban/rv3.jpg', '../images/places/bandarban/rv4.jpg', '../images/places/bandarban/rv5.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'Guests can make the most of all that the lively city has to offer. With its convenient location, the property offers easy access to the city\'s must-see destinations'),
+(12, 'Nilachol Nilambori Resort', '../images/places/bandarban/nl2.jpg', '../images/places/bandarban/nl3.jpg', '../images/places/bandarban/nl4.jpg', '../images/places/bandarban/nl5.jpg', '<ul><li>Free Wifi</li><li>Free Parking</li><li>Breakfast</li><li>Air Condition</li></ul>', 'For travelers who want to take in the sights and sounds of Bandarban, Nilachol Nilambori Resort is the perfect choice. From here, guests can make the most of all that the lively city has to offer. With its convenient location, the property offers easy access to the city\'s must-see destinations.');
 
 -- --------------------------------------------------------
 
@@ -160,6 +194,12 @@ ALTER TABLE `area`
 --
 ALTER TABLE `emp`
   ADD PRIMARY KEY (`empId`);
+
+--
+-- Indexes for table `hotel`
+--
+ALTER TABLE `hotel`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `login`

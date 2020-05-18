@@ -12,8 +12,8 @@
 	{
 		$row = mysqli_fetch_array($res);
 
-		$update = true;
-		$id = $row['id'];
+		//$update = true;
+		//$id = $row['id'];
 		$img1 = $row['img1'];
 		$img2 = $row['img2'];
 		$name1 = $row['name1'];
@@ -29,11 +29,69 @@
 	}
 	if(isset($_POST['first']))
 	{
-		$_SESSION['value'] = "Kanon";
+		if($area == 1)
+		{
+			$_SESSION['hotel_id'] = "1";
+			header("Location:selectedHotel.php");
+		}
+		if($area == 2)
+		{
+			$_SESSION['hotel_id'] = "3";
+			header("Location:selectedHotel.php");
+		}
+		if($area == 3)
+		{
+			$_SESSION['hotel_id'] = "5";
+			header("Location:selectedHotel.php");
+		}
+		if($area == 4)
+		{
+			$_SESSION['hotel_id'] = "7";
+			header("Location:selectedHotel.php");
+		}
+		if($area == 5)
+		{
+			$_SESSION['hotel_id'] = "9";
+			header("Location:selectedHotel.php");
+		}
+		if($area == 6)
+		{
+			$_SESSION['hotel_id'] = "11";
+			header("Location:selectedHotel.php");
+		}
 	}
 	if(isset($_POST['second']))
 	{
-		$_SESSION['value2'] = "Arif";
+		if($area == 1)
+		{
+			$_SESSION['hotel_id'] = "2";
+			header("Location:selectedHotel.php");
+		}
+		if($area == 2)
+		{
+			$_SESSION['hotel_id'] = "4";
+			header("Location:selectedHotel.php");
+		}
+		if($area == 3)
+		{
+			$_SESSION['hotel_id'] = "6";
+			header("Location:selectedHotel.php");
+		}
+		if($area == 4)
+		{
+			$_SESSION['hotel_id'] = "8";
+			header("Location:selectedHotel.php");
+		}
+		if($area == 5)
+		{
+			$_SESSION['hotel_id'] = "10";
+			header("Location:selectedHotel.php");
+		}
+		if($area == 6)
+		{
+			$_SESSION['hotel_id'] = "12";
+			header("Location:selectedHotel.php");
+		}
 	}
 ?>
 
@@ -45,7 +103,7 @@
 	<body style="background-color:LightGray">
 		
 			<table border="2">
-			<form method="post" action="hotelLM.php">
+			<form method="post" action="">
 				<tr>
 					<td>
 						<button type="submit" name="first">
@@ -83,7 +141,7 @@
 					</td>				
 				</tr>
 				</form>
-				<form method="post" action="hotelLM.php">							
+				<form method="post" action="">							
 				<tr>
 					<td>
 						<button type="submit" name="second">
@@ -99,21 +157,21 @@
 							<?php
 								if($_SESSION['roomType'] == 1)
 								{
-									$cost = $cost_b1*$_SESSION['day'];
-									$_SESSION['cost2'] = $cost;
-									echo  "$cost"."$";
+									$cost2 = $cost_b1*$_SESSION['day'];
+									$_SESSION['cost2'] = $cost2;
+									echo  "$cost2"."$";
 								}
 								else if($_SESSION['roomType'] == 2)
 								{
-									$cost = $cost_b2*$_SESSION['day'];
-									$_SESSION['cost2'] = $cost;
-									echo  "$cost"."$";
+									$cost2 = $cost_b2*$_SESSION['day'];
+									$_SESSION['cost2'] = $cost2;
+									echo  "$cost2"."$";
 								}
 								else
 								{
-									$cost = $cost_b3*$_SESSION['day'];
-									$_SESSION['cost2'] = $cost;
-									echo  "$cost"."$";
+									$cost2 = $cost_b3*$_SESSION['day'];
+									$_SESSION['cost2'] = $cost2;
+									echo  "$cost2"."$";
 								}
 							?>
 							</font>
