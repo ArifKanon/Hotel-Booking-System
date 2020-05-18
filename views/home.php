@@ -7,9 +7,9 @@
 	<head>
 		<title>Home</title>
 	</head>
-
+ 
 	<body style="background-color:LightGray">
-		
+		<form style="align:center">
 		<h1>Available Area</h1>
 		<table>
 			<tr>
@@ -62,5 +62,6 @@
 				</td>
 			</tr>
 		</table>
+	 </form >
 	</body>
 </html>
