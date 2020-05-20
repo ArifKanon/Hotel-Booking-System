@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2020 at 09:31 PM
+-- Generation Time: May 20, 2020 at 03:36 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.30
 
@@ -54,6 +54,32 @@ INSERT INTO `area` (`id`, `img1`, `img2`, `name1`, `name2`, `details1`, `details
 (4, '../images/places/cox\'s_bazar/sbr1.jpg', '../images/places/cox\'s_bazar/lbh1.jpg', 'Sayeman Beach Resort', 'Long Beach Hotel', 'Marine Drive, Road, Cox\'s Bazar<br><br>One person room rent: 100$<br>Two person room rent: 120$<br>Family room rent: 140$<br><br>', 'Kalatoli, Hotel-Motel Zone, Cox\'s Bazar<br><br>One person room rent: 90$<br>Two person room rent: 100$<br>Family room rent: 110$<br><br>', 100, 120, 140, 90, 100, 110),
 (5, '../images/places/sundarban/r1.jpg', '../images/places/sundarban/amb1.jpg', 'Hotel Royal International', 'Hotel Ambassador', 'KDA Avenue Khan Jahan Ali Road, Royal Mor, Khulna<br><br>One person room rent: 80$<br>Two person room rent: 100$<br>Family room rent: 110$<br><br>', 'Ghos Road, Helatala Rd, Khulna<br><br>One person room rent: 60$<br>Two person room rent: 70$<br>Family room rent: 80$<br><br>', 80, 100, 110, 60, 70, 80),
 (6, '../images/places/bandarban/rv1.jpg', '../images/places/bandarban/nl1.jpg', 'Hotel River View Bandarban', 'Nilachol Nilambori Resort', 'Nilachal Porjoton Complex, Bandarban<br><br>One person room rent: 80$<br>Two person room rent: 90$<br>Family room rent: 110$<br><br>', 'Sodok O Jonopod Rd, Bandarban<br><br>One person room rent: 85$<br>Two person room rent: 100$<br>Family room rent: 120$<br><br>', 85, 100, 120, 80, 90, 110);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `booking`
+--
+
+CREATE TABLE `booking` (
+  `bId` int(5) NOT NULL,
+  `b_uId` int(5) NOT NULL,
+  `bName` varchar(40) NOT NULL,
+  `bRoomNum` int(4) NOT NULL,
+  `bCost` int(6) NOT NULL,
+  `bDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`bId`, `b_uId`, `bName`, `bRoomNum`, `bCost`, `bDate`) VALUES
+(1, 1, 'Hotel Bangla', 1, 1, '2020-05-20 11:43:46'),
+(2, 222, 'Rose View Hotel', 2, 200, '2020-05-20 12:05:56'),
+(3, 454, 'Nilachol Nilambori Resort', 3, 540, '2020-05-20 12:31:40'),
+(4, 454, 'Nilachol Nilambori Resort', 3, 540, '2020-05-20 12:32:07'),
+(6, 333, 'Hotel Royal International', 1, 200, '2020-05-20 12:33:03');
 
 -- --------------------------------------------------------
 
@@ -135,18 +161,31 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`status`, `id`, `password`) VALUES
 (0, '111', '111'),
 (2, '123', '123'),
+(2, '12334', 'asdf'),
 (2, '1234', '1234'),
+(2, '123455', '13456'),
 (2, '222', '222'),
+(2, '232', '232'),
 (1, '311', '311'),
+(2, '323', '323'),
 (2, '333', '333'),
+(2, '343', '343'),
+(2, '3456', 'adfdasf'),
 (2, '444', '444'),
+(2, '454', '454'),
 (1, '456', '456'),
+(2, '55555', 'jgjkgkj'),
 (2, '666', '666'),
+(2, '6767', 'asdf'),
+(2, '7777', 'jgjkgkj'),
 (2, '878', '878'),
 (2, '888', '888'),
 (2, '987', '987'),
 (2, '997', '997'),
-(1, '999', '999');
+(1, '999', '999'),
+(2, 'adf', '567'),
+(2, 'asd', '7997'),
+(2, 'sad', 'asdf');
 
 -- --------------------------------------------------------
 
@@ -170,14 +209,26 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`userId`, `firstName`, `lastName`, `gender`, `address`, `email`, `phone`) VALUES
 ('123', 'Zerin', 'Khatun', 'Female', 'Mirpur', 'zeh@oulook.com', '0185467832'),
+('12334', 'soumik', 'islam', ' Male', 'Amdipara', 'souumik@out.com', '12324'),
 ('1234', 'Ashik', 'Talukdar', 'Male', 'Gaibandha', 'ashik@gmail.com', '0152199999'),
+('123455', 'sakib', 'rahman', ' Male', '1234', 'a@gmail.com', '1234'),
 ('222', 'Soumik', 'Khondokar', ' Male', 'Thanapara', 'soumik@oulook.com', '015792347912'),
+('232', 'Abrar', 'Ahmed', ' Male', 'Dhaka', 'abrar@outook.com', '01712334455'),
+('323', 'Sakib', 'Sikdar', ' Male', 'Barokona', 'sikdar@gmail.com', '0176342345'),
 ('333', 'Faruk', 'Abdullah', 'Male', 'Gulshan', 'fa@gmail.com', '0176555555'),
+('343', 'adsf', 'adfa', ' Female', 'adfa', 'a@a.com', '134'),
+('3456', 'asdf', 'adf', ' Male', 'adf', 'adf', 'adf'),
 ('444', 'Fahmida', 'Khatu', 'Female', 'Mirpur', 'fah@oulook.com', '0185467832'),
+('454', 'Md', 'Amin', ' Male', 'adf', 'adf@d.com', '123'),
+('55555', 'asdf', 'adf', ' Male', 'adfadf', '01730261618', '1324'),
 ('666', 'Fatima', 'Khanam', 'Female', 'Kuril', 'ak@outlook.com', '0176800000'),
+('6767', 'soumik', 'islam', ' Male', 'Amdipara', 'souumik@out.com', '12324'),
+('7777', 'asdf', 'adf', ' Male', 'adfadf', '01730261618', '1324'),
 ('878', 'asdf', 'asdf', ' Female', 'adf', 'adf', 'adf'),
 ('888', 'Atif', 'Aslam', 'Male', 'Pakistan', 'atif@gmail.com', '08888882342'),
-('987', 'Aftab', 'Ahmed', 'Male', 'Dhaka', 'af@gmail.com', '016233333');
+('987', 'Aftab', 'Ahmed', 'Male', 'Dhaka', 'af@gmail.com', '016233333'),
+('adf', 'asdf', 'af', ' Male', 'adfadf', 'adfa', 'adf'),
+('asd', 'asdf', 'af', ' Female', 'adfadf', 'vetkirat@gmail.com', '1324');
 
 --
 -- Indexes for dumped tables
@@ -188,6 +239,12 @@ INSERT INTO `user` (`userId`, `firstName`, `lastName`, `gender`, `address`, `ema
 --
 ALTER TABLE `area`
   ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `booking`
+--
+ALTER TABLE `booking`
+  ADD PRIMARY KEY (`bId`,`b_uId`);
 
 --
 -- Indexes for table `emp`
@@ -212,6 +269,16 @@ ALTER TABLE `login`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`userId`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `booking`
+--
+ALTER TABLE `booking`
+  MODIFY `bId` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

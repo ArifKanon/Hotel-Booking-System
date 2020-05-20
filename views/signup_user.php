@@ -34,6 +34,7 @@
 				if (!preg_match("/^[a-zA-Z ]*$/",$fname))
 				{
 					$fnameErr = "Only letters and white space allowed!";
+					$key = false;
 				}
 			}
 			if(empty($_POST['lname']))
@@ -46,7 +47,8 @@
 				$lname=htmlspecialchars($_POST['lname']);
 				if (!preg_match("/^[a-zA-Z ]*$/",$lname)) {
 					$lnameErr = "Only letters and white space allowed!";
-				  }
+					$key = false;
+				}
 			}
 			if (empty($_POST['gender']))
 			{
@@ -88,6 +90,7 @@
 				$num= test_input($_POST["number"]);
 				if (!preg_match("/^[0-9]*$/",$num)) {
 					$numErr = "Only numbers are allowed!";
+					$key = false;
 				  }
 			}
 
@@ -101,6 +104,7 @@
 				$id=htmlspecialchars($_POST['id']);
 				if (!preg_match("/^[0-9-]*$/",$id)) {
 					$idErr = "Only numbers and hyphens are allowed!";
+					$key = false;
 				}
 			}
 

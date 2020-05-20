@@ -7,10 +7,10 @@
 		header("Location:home.php");
 	}
 	if(isset($_SESSION['message']))
-        {
-            echo $_SESSION['message'];
-            unset($_SESSION['message']); // Destroys the speccified variables
-        }
+	{
+		echo $_SESSION['message'];
+		unset($_SESSION['message']); // Destroys the speccified variables
+	}
 ?>
 
 <html>

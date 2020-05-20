@@ -9,53 +9,62 @@
 
 	session_start();
 	if(isset($_POST['submit']))
-		{
+	{
 			
-			if (empty($_POST['id']))
-			{
-				$idErr="*Id Required";
-				$key = false;
-			}
-			else
-			{
-				$id=htmlspecialchars($_POST['id']);
-			}
-			if (empty($_POST['pass']))
-			{
-				$passErr="*Password Required";
-				$key = false;
-			}
-			else
-			{
-				$pass=htmlspecialchars($_POST['pass']);
-			}
+		if (empty($_POST['id']))
+		{
+			$idErr="*Id Required";
+			$key = false;
+		}
+		else
+		{
+			$id=htmlspecialchars($_POST['id']);
+		}
+		if (empty($_POST['pass']))
+		{
+			$passErr="*Password Required";
+			$key = false;
+		}
+		else
+		{
+			$pass=htmlspecialchars($_POST['pass']);
+		}
 
-			if($key == true)
-			{
-				$query = "select * from login where status='0' && id='$id' && password='$pass'";
-				$res =  execute($query);
-				$rowCount = mysqli_num_rows($res);
-				$query2 = "select * from login where status='1' && id='$id' && password='$pass'";
-				$res2 = execute($query2);
-				$rowCount2 = mysqli_num_rows($res2);
-				$query3 = "select * from login where status='2' && id='$id' && password='$pass'";
-				$res3 = execute($query3);
-				$rowCount3 = mysqli_num_rows($res3);
+		if($key == true)
+		{
+			$query = "select * from login where status='0' && id='$id' && password='$pass'";
+			$res =  execute($query);
+			$rowCount = mysqli_num_rows($res);
+			$query2 = "select * from login where status='1' && id='$id' && password='$pass'";
+			$res2 = execute($query2);
+			$rowCount2 = mysqli_num_rows($res2);
+			$query3 = "select * from login where status='2' && id='$id' && password='$pass'";
+			$res3 = execute($query3);
+			$rowCount3 = mysqli_num_rows($res3);
 
-				if($rowCount == true)
-				{
-					header("Location:admin_home.php");
-				}
-				if($rowCount2 == true)
-				{
-					header("Location:employee_home.php");
-				}
-				if($rowCount3 == true)
-				{
-					header("Location:user_home.php");
-				}
-				
+			if($rowCount == true)
+			{
+				header("Location:admin_home.php");
 			}
+			if($rowCount2 == true)
+			{
+				header("Location:employee_home.php");
+			}
+			if($rowCount3 == true)
+			{
+				$_SESSION['active'] = true;
+				$_SESSION['b_uId'] = $id;
+				header("Location:user_home.php");
+			}
+			/*if($rowCount == false or $rowCount2 == false or $rowCount3 == false)
+			{
+				echo "Your Input is wrong";
+				$id="";
+				$pass="";
+				//session_destroy();
+			}*/
+			
+		}
 		
 	}
 ?>

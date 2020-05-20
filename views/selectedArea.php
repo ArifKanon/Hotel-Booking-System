@@ -119,19 +119,19 @@
 							<?php
 								if($_SESSION['roomType'] == 1)
 								{
-									$cost = $cost_a1 * $_SESSION['day'];
+									$cost = $cost_a1 * $_SESSION['day'] * $_SESSION["room_number"];
 									$_SESSION['cost1'] = $cost;
 									echo  "$cost"."$";
 								}
 								else if($_SESSION['roomType'] == 2)
 								{
-									$cost = $cost_a2 * $_SESSION['day'];
+									$cost = $cost_a2 * $_SESSION['day'] * $_SESSION["room_number"];
 									$_SESSION['cost1'] = $cost;
 									echo  "$cost"."$";
 								}
 								else
 								{
-									$cost = $cost_a3 * $_SESSION['day'];
+									$cost = $cost_a3 * $_SESSION['day'] * $_SESSION["room_number"];
 									$_SESSION['cost1'] = $cost;
 									echo  "$cost"."$";
 								}
@@ -157,19 +157,19 @@
 							<?php
 								if($_SESSION['roomType'] == 1)
 								{
-									$cost2 = $cost_b1*$_SESSION['day'];
+									$cost2 = $cost_b1*$_SESSION['day'] * $_SESSION["room_number"];
 									$_SESSION['cost2'] = $cost2;
 									echo  "$cost2"."$";
 								}
 								else if($_SESSION['roomType'] == 2)
 								{
-									$cost2 = $cost_b2*$_SESSION['day'];
+									$cost2 = $cost_b2*$_SESSION['day'] * $_SESSION["room_number"];
 									$_SESSION['cost2'] = $cost2;
 									echo  "$cost2"."$";
 								}
 								else
 								{
-									$cost2 = $cost_b3*$_SESSION['day'];
+									$cost2 = $cost_b3*$_SESSION['day'] * $_SESSION["room_number"];
 									$_SESSION['cost2'] = $cost2;
 									echo  "$cost2"."$";
 								}

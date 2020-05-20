@@ -4,6 +4,7 @@
 	$conn = mysqli_connect($serverName,$userName,$password,$dbName) or die('Database Connection Error');
 
 	$hId = $_SESSION['hotel_id'];
+	$_SESSION['check'] = false;
 
 	$query = "SELECT * FROM hotel WHERE id = $hId";
 	$result = mysqli_query($conn,$query);
@@ -18,6 +19,20 @@
 		$img4 = $row['img4'];
 		$facility = $row['facility'];
 		$details = $row['details'];
+	}
+	$_SESSION['bName'] = $name;
+
+	if(isset($_POST['reserve']))
+	{
+		if($_SESSION['active'] == true)
+		{
+			header("Location:reserve_complete.php");
+		}
+		else
+		{
+			$_SESSION['check'] = true;
+			header("Location:check_account.php");
+		}
 	}
 ?>
 
@@ -71,17 +86,21 @@
 					<font size="5"><b>Cost:
 						 <?php
 							if($hId == 1 or $hId == 3 or $hId == 5 or $hId == 7 or $hId == 9 or $hId == 11)
+							{
+								$_SESSION['bCost'] = $_SESSION['cost1'];
 								echo $_SESSION['cost1'];
+							}							
 							else
+							{
+								$_SESSION['bCost'] = $_SESSION['cost2'];
 								echo $_SESSION['cost2'];
+							}
 						 ?>
 					</b></font>
 					<br /><br />
-					<a href="reserve.php"
-						><font style="background-color: green; color: white;" size="5"
-							>Reserve</font
-						>
-					</a>
+					<form action="" method="post">
+						<button type="submit" name="reserve">Reserve</button>
+					</form>
 				</td>
 			</tr>
 		</table>
