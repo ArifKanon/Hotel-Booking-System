@@ -3,7 +3,6 @@
 <?php
 	require_once "../models/database.php";
 	$conn = mysqli_connect($serverName,$userName,$password,$dbName) or die('Database Connection Error');
-
 ?>	
 
 <html>

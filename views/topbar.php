@@ -24,7 +24,7 @@
 			else
 			{
 				$destination=htmlspecialchars($_POST['destination']);
-				if (!preg_match("/^[a-zA-Z ]*$/",$destination)) {
+				if (!preg_match("/^[a-zA-Z' ]*$/",$destination)) {
 					$destinationErr = "Only letters and white space allowed!";
 					$key = false;
 				}
@@ -88,7 +88,8 @@
 				$destination == "Chattogram" or $destination == "chattogram" or $destination == "CHATTOGRAM" or
 				$destination == "Sylhet" or $destination == "sylhet" or $destination == "SYLHET" or
 				$destination == "Sundarban" or $destination == "sundarban" or $destination == "SUNDARBAN" or
-				$destination == "Cox's Bazar" or $destination == "coxs bazar" or $destination == "cox's bazar" or $destination == "COX'S BAZAR" or
+				$destination == "Cox's Bazar" or $destination == "coxs bazar" or $destination == "cox's bazar"
+						or $destination == "Cox's bazar" or $destination == "COX'S BAZAR" or
 				$destination == "Bandarban" or $destination == "bandarban" or $destination == "BANDARBAN")
 				{
 					if($destination == "Dhaka" or $destination == "dhaka" or $destination == "DHAKA")
