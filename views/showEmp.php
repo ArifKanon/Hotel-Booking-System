@@ -20,7 +20,7 @@
 	<head>
 		<title>Employee Info</title>
 	</head>
-	<body>
+	<body style="background-color:SteelBlue">
 		<center>
 		<h1>All Employee Details</h1> 	
 		<table border="2" width="600">

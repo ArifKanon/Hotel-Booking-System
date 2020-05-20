@@ -20,7 +20,7 @@
 	<head>
 		<title>User Info</title>
 	</head>
-	<body>
+	<body style="background-color:DarkCyan">
 		<center>
 		<h1>All User Details</h1> 	
 		<table border="2" width="600">

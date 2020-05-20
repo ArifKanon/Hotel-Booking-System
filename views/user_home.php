@@ -10,7 +10,7 @@
 	<head>
 		<title>User Home</title>
 	</head>
-	<body>
+	<body style="background-color:DarkSeaGreen">
 		<center>
 		<h1>History of Reservation</h1> 	
 		<table border="2" width="600">

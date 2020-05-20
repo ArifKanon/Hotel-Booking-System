@@ -3,6 +3,9 @@
 	if(isset($_POST['submit']))
 	{	
 		session_destroy();
+		session_start();
+		$_SESSION['active'] = false;
+		$_SESSION['check'] = false;
 		header("Location:home.php");
 	}
 ?>
@@ -12,7 +15,7 @@
 		<title>Admin</title>
 	</head>
 
-	<body style="background-color:lightslategray">
+	<body style="background-color:steelBlue">
 		<table>
 			<tr>
 				<td style="text-align:left; width:600px;">
