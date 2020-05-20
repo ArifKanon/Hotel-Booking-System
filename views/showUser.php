@@ -4,6 +4,9 @@
 	if(isset($_POST['submit']))
 	{	
 		session_destroy();
+		session_start();
+		$_SESSION['active'] = false;
+		$_SESSION['check'] = false;
 		header("Location:home.php");
 	}
 	if(isset($_SESSION['message']))
