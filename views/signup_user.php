@@ -157,10 +157,12 @@
 	?>
 
 <html>
-	<head></head>
-	<body style="background-color:LightGray" background:>
-	
-	<h1 style="text-align:center;">Sign Up</h1>
+	<head>
+		<link rel="stylesheet" href="form.css">
+	</head>
+	<body>
+	<div class="container">
+	<h1>Sign Up</h1>
 		<form method="post" action="">
 			<table align="center">
 				<tr>
@@ -227,12 +229,13 @@
 
 				<tr>
 					<td colspan="2" align="center">
-						<input type="submit" name="submit" value="Submit">
+						<input type="submit" name="submit" class="btn" value="Submit">
 					</td>
 				</tr>
 				 
 				
 			</table>
 		</form>
+		</div>
 	</body>
 </html>

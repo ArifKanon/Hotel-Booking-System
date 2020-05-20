@@ -50,10 +50,11 @@
 <html>
 	<head>
 		<title>Admin</title>
+		<link rel="stylesheet" href="admin.css">
 	</head>
-
-	<body style="background-color:rosybrown">
-		<table>
+	<?php require_once 'header.php' ?>
+	<body>
+		<!-- <table>
 			<tr>
 				<td style="text-align:left; width:1000px;">
 					<font size="7" style="background-color: teal; color: whitesmoke;"
@@ -66,9 +67,9 @@
 					</form>
 				</td>
 			</tr>
-		</table>
+		</table> -->
 
-		<br /><br />
+		<!-- <br /><br />
 		<table align="center">
 			
 			<tr>
@@ -90,6 +91,28 @@
 					</a><br>
 				</td>
 			</tr>
-		</table>
+		</table> -->
+		<div class="overview">
+			<div class="card">
+				<big>
+				Total Employee: <?php echo $empNum;?><br>
+				Total User: <?php echo $userNum;?><br>
+				Total Reservation: <?php echo $resNum;?>
+				</big>
+			</div>
+			<div class="card">
+				<div style="display: flex;">
+					<div class="img">
+					<img src="../images/design/emp_icon.jpg" />
+					</div>
+					<a href="showEmp.php">Manage Employee</a>
+				</div>
+					<!-- <a href="showEmp.php">
+					<font size="6" style="background-color: dodgerblue; color:white"
+							>Manage Employee</font
+						></b>
+					</a><br> -->
+			</div>
+		</div>
 	</body>
 </html>

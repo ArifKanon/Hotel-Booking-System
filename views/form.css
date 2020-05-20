@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+
+body{
+	
+}
+
+.container{
+	margin-top: 50px;
+	width: 400px;
+	margin-top: 50px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+    margin-left: 350px;
+    background-color: #33ffff;
+
+
+}
+td {
+	font-size: 17px;
+	padding: 5px;
+}
+
+td input{
+	padding: 2px;
+
+}
+
+.container h1{
+	margin-bottom: 20px;
+	margin-left: 70px;
+	
+}
+
+.btn{
+	padding: 8px;
+	width: 50%;
+	margin-left: 90px;
+	border-radius: 5px;
+	text-decoration: none;
+	border: 1px solid #00adb5;
+	background-color: #00adb5;
+}

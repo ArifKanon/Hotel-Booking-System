@@ -5,7 +5,7 @@
 }
 body{
   background: #000;
-  background: url(images/design/get_started.jpg) no-repeat;
+  background: url(../images/design/get_started.jpg) no-repeat;
   background-size: cover;
 }
 .container{

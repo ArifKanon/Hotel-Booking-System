@@ -38,10 +38,11 @@
 <html>
 	<head>
 		<title>Employee</title>
-	</head>
 
+	</head>
+   <?php require_once 'header.php' ?>
 	<body style="background-color:DarkCyan">
-		<table>
+		<!-- <table>
 			<tr>
 				<td style="text-align:left; width:1000px;">
 					<font size="7" style="background-color: teal; color: whitesmoke;"
@@ -54,7 +55,7 @@
 					</form>
 				</td>
 			</tr>
-		</table>
+		</table> -->
 
 		<br /><br />
 		<table align="center">
