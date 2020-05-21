@@ -1,7 +1,7 @@
 <?php 
 
 if(isset($_POST['logout'])){
-    header('location:index.php');
+    header('location:home.php');
     session_destroy();
 }
 

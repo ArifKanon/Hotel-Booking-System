@@ -8,7 +8,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Animation Text</title>
+    <title>Get_Started</title>
     <link rel="stylesheet" href="style_get_started.css">
    
   </head>

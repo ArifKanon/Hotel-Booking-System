@@ -1,4 +1,4 @@
-<?php require_once "topbar.php"; ?>
+<?php require_once "topbar1.php"; ?>
 <?php
 	require_once "../models/database.php";
 	$conn = mysqli_connect($serverName,$userName,$password,$dbName) or die('Database Connection Error');
